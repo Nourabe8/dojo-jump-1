@@ -4,11 +4,11 @@ pipeline {
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('nourab-dockerhub')
-		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-   AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
-	ARTIFACT_NAME = 'Dockerrun.aws.json'
-AWS_S3_BUCKET = 'dojotest-eb-docker222'
-AWS_EB_APP_NAME = 'dojotest-dojojump'
+		AWS_ACCESS_KEY_ID  = credentials('jenkins-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+     	ARTIFACT_NAME = 'Dockerrun.aws.json'
+        AWS_S3_BUCKET = 'dojotest-eb-docker222'
+        AWS_EB_APP_NAME = 'dojotest-dojojump'
         AWS_EB_ENVIRONMENT_NAME = 'Dojotestdojojump-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
 	}
